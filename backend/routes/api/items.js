@@ -41,23 +41,20 @@ router.get("/", auth.optional, function (req, res, next) {
   var limit = 100;
   var offset = 0;
 
-  //set limit if exist
   if (typeof req.query.limit !== "undefined") {
     limit = req.query.limit;
   }
 
-  //set offset if exist
   if (typeof req.query.offset !== "undefined") {
     offset = req.query.offset;
   }
 
-  //set taglist if tag exist
   if (typeof req.query.tag !== "undefined") {
     query.tagList = { $in: [req.query.tag] };
   }
 
   if (typeof req.query.title !== "undefined") {
-    query.title = req.query.title;
+    query.title = new RegExp(req.query.title, i);
   }
 
   Promise.all([
@@ -66,7 +63,6 @@ router.get("/", auth.optional, function (req, res, next) {
       ? User.findOne({ username: req.query.favorited })
       : null,
   ])
-    //set return to globals of same name
     .then(function (results) {
       var seller = results[0];
       var favoriter = results[1];
