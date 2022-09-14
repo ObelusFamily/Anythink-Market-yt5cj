@@ -10,7 +10,12 @@ const Banner = (props) => {
         <img src={logo} alt="banner" />
         <div>
           <span id="get-part" >A Place to get</span>
-          <input id="search-box" type="search" placeholder="What is it that you truly desire?" onChange={props.onSearch}/>
+          <input 
+            id="search-box" 
+            type="search" 
+            placeholder="What is it that you truly desire?" 
+            onChange={props.onSearch}
+            />
           <i className="bi bi-search"></i>
           <span>the cool stuff</span>
         </div>
