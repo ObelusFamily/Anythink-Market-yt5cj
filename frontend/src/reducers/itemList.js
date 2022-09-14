@@ -10,7 +10,7 @@ import {
   PROFILE_PAGE_UNLOADED,
   PROFILE_FAVORITES_PAGE_LOADED,
   PROFILE_FAVORITES_PAGE_UNLOADED,
-  SEARCH_FILTER
+  SEARCH_FILTER,
 } from "../constants/actionTypes";
 
 const reducer = (state = {}, action) => {
@@ -48,14 +48,14 @@ const reducer = (state = {}, action) => {
         currentPage: 0,
       };
     case SEARCH_FILTER:
-    return {
-    ...state,
+      return {
+        ...state,
         title: action.title.lenth > 2 ? action.title : null,
         pager: action.pager,
         items: action.payload.items,
         itemsCount: action.payload.itemsCount,
         currentPage: 0,
-      }
+      };
     case HOME_PAGE_LOADED:
       return {
         ...state,

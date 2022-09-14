@@ -62,20 +62,19 @@ body {
 }
 
 .bi {
-   color: #8671c6;
-   position: relative;
-   z-index: 3;
-   right: 2rem;
+  color: #8671c6;
+  position: relative;
+  z-index: 3;
+  right: 2rem;
 }
 
 #search-box {
-    border-color: $input-border-color;
-    border-radius: 4px;
-    margin-left: 1ch;
-    padding-left: 1ch;
-
+  border-color: $input-border-color;
+  border-radius: 4px;
+  margin-left: 1ch;
+  padding-left: 1ch;
 }
 
 #search-box::placeholder {
-    color: #d0d0d0;
+  color: #d0d0d0;
 }
