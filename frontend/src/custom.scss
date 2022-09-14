@@ -24,6 +24,7 @@ $theme-colors: (
 
 body {
   background-image: url("./imgs/background.png");
+  //background-position: 65% 12%;
   background-position: top;
   background-repeat: no-repeat;
 }
@@ -58,4 +59,22 @@ body {
 
 .user-info {
   min-width: 800px;
+}
+
+.bi {
+  color: #8671c6;
+  position: relative;
+  z-index: 3;
+  right: 2rem;
+}
+
+#search-box {
+  border-color: $input-border-color;
+  border-radius: 4px;
+  margin-left: 1ch;
+  padding-left: 1ch;
+}
+
+#search-box::placeholder {
+  color: #d0d0d0;
 }
