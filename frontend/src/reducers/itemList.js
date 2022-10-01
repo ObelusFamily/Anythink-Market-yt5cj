@@ -43,6 +43,7 @@ const reducer = (state = {}, action) => {
         pager: action.pager,
         items: action.payload.items,
         itemsCount: action.payload.itemsCount,
+        title: action.title,
         tab: null,
         tag: action.tag,
         currentPage: 0,
@@ -50,7 +51,7 @@ const reducer = (state = {}, action) => {
     case SEARCH_FILTER:
       return {
         ...state,
-        title: action.title.lenth > 2 ? action.title : null,
+        title: action.title,
         pager: action.pager,
         items: action.payload.items,
         itemsCount: action.payload.itemsCount,

@@ -62,16 +62,18 @@ body {
 }
 
 .bi {
-  color: #8671c6;
+  font-size: 3rem;
+  color: red;
   position: relative;
   z-index: 3;
-  right: 2rem;
+  margin-right: 1rem;
 }
 
 #search-box {
   border-color: $input-border-color;
   border-radius: 4px;
   margin-left: 1ch;
+  margin-right: 1ch;
   padding-left: 1ch;
 }
 
