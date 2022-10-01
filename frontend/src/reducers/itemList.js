@@ -43,6 +43,7 @@ const reducer = (state = {}, action) => {
         pager: action.pager,
         items: action.payload.items,
         itemsCount: action.payload.itemsCount,
+        title: action.title,
         tab: null,
         tag: action.tag,
         currentPage: 0,
