@@ -22,7 +22,8 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
   onClickTag: (tag, pager, payload) =>
     dispatch({ type: APPLY_TAG_FILTER, tag, pager, payload }),
-  onSearch: (title) => dispatch({ type: SEARCH_FILTER, title }),
+  onSearch: (title, pager, payload) =>
+    dispatch({ type: SEARCH_FILTER, title, pager, payload }),
   onLoad: (tab, pager, payload) =>
     dispatch({ type: HOME_PAGE_LOADED, tab, pager, payload }),
   onUnload: () => dispatch({ type: HOME_PAGE_UNLOADED }),
@@ -47,7 +48,7 @@ class Home extends React.Component {
   render() {
     return (
       <div className="home-page">
-        <Banner onSearch={this.onSearch} />
+        <Banner onSearch={this.props.onSearch} />
 
         <div className="container page">
           <Tags tags={this.props.tags} onClickTag={this.props.onClickTag} />
