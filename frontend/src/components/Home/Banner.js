@@ -3,6 +3,7 @@ import logo from "../../imgs/logo.png";
 import "./../../custom.scss";
 
 const Banner = (props) => {
+  console.log(props.title)
   return (
     <div className="banner text-white">
       <div className="container p-4 text-center">
